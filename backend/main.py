@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from dotenv import load_dotenv
-from routers import advert, optimization
+from routers import advert
 
 load_dotenv()
 
@@ -22,4 +22,3 @@ app.add_middleware(
 )
 
 app.include_router(advert.router, prefix="/api/advert", tags=["Advert"])
-app.include_router(optimization.router, prefix="/api/optimization", tags=["Optimization"])

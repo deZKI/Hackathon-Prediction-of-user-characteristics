@@ -31,7 +31,6 @@ services:
       - core
 
 volumes:
-  postgres_data:
   static_volume:
   media_volume:
   frontend-build_volume:
