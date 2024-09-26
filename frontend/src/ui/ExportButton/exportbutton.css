@@ -1,0 +1,7 @@
+.header__export-button svg path {
+  transition: stroke .1s ease
+}
+
+.header__export-button:hover svg path {
+  stroke: var(--color-secondary-3);
+}

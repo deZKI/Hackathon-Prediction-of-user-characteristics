@@ -1,0 +1,21 @@
+.age-distribution-chart__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.age-distribution-chart__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.age-distribution-chart__types {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+}

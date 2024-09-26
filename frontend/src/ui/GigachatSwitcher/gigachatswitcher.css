@@ -1,0 +1,44 @@
+.header__gigachat-switcher {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 16px;
+  width: 156px;
+  background-color: var(--color-panel-background);
+}
+
+.header__gigachat-switcher__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  color: var(--color-main);
+}
+
+.header__gigachat-switcher__button {
+  position: relative;
+  border-radius: 24px;
+  width: 40px;
+  height: 20px;
+  background-color: var(--color-background);
+  transition: background-color 0.1s ease;
+}
+
+.header__gigachat-switcher__button--active {
+  background-color: var(--color-secondary-3);
+}
+
+.header__gigachat-switcher__circle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-chart-main);
+  transition: transform 0.1s ease;
+}
+
+.header__gigachat-switcher__circle--active {
+  transform: translateX(20px);
+}

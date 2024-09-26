@@ -1,0 +1,27 @@
+.users-dropdown__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 16px;
+  width: 172px;
+  background-color: var(--color-panel-background);
+  transition: outline .1s ease;
+}
+
+.users-dropdown__button:hover {
+  outline: 1px solid var(--color-secondary-3);
+}
+
+.users-dropdown__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  color: var(--color-main);
+}
+
+.users-dropdown__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

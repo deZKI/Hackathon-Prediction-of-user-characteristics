@@ -1,0 +1,23 @@
+.watch-history {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 20px;
+  max-width: 438px;
+  width: 100%;
+  background-color: var(--color-panel-background);
+}
+
+.watch-history__title {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.watch-history__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}

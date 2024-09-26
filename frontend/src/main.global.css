@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Open Sans";
+  src: local("Roboto-Regular"), url("./assets/fonts/OpenSans-Light.woff2") format("woff2"), url("./assets/fonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Inter-Regular"), url("./assets/fonts/OpenSans-Regular.woff2") format("woff2"), url("./assets/fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Inter-Medium"), url("./assets/fonts/OpenSans-Bold.woff2") format("woff2"), url("./assets/fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-main:              #FFFFFF;
+  --color-secondary-1:       #828282;
+  --color-secondary-2:       #444444;
+  --color-secondary-3:       #347BA3;
+  --color-chart-main:        #4BB2EC;
+  --color-chart-secondary-1: #8FC0DB;
+  --color-chart-secondary-2: #D8E9F3;
+  --color-background:        #1C232B;
+  --color-panel-background:  #29333D;
+
+  --zindex-dropdown:         1000;
+  --zindex-sticky:           1020;
+  --zindex-fixed:            1030;
+  --zindex-modal-backdrop:   1040;
+  --zindex-modal:            1050;
+  --zindex-popover:          1060;
+  --zindex-tooltip:          1070;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: var(--color-main);
+  background-color: var(--color-background);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+input {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}

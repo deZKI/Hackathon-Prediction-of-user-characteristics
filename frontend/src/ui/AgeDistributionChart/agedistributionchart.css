@@ -1,0 +1,8 @@
+.age-distribution-chart {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  border-radius: 20px;
+  width: 100%;
+  background-color: var(--color-panel-background);
+}
