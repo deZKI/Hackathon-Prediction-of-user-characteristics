@@ -5,7 +5,7 @@
   "scripts": {
     "start": "react-scripts start",
     "local-docker": "REACT_APP_API_URL=http://core/api react-scripts build",
-    "prod": "REACT_APP_API_URL=http://95.163.229.215/api react-scripts build"
+    "prod": "REACT_APP_API_URL=http://194.67.84.171/api react-scripts build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
