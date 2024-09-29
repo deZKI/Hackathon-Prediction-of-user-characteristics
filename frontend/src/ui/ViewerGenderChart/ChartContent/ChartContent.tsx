@@ -17,7 +17,6 @@ export default function ChartContent() {
     ],
   };
 
-
   const options: any = {
     indexAxis: 'y',
     responsive: true,
