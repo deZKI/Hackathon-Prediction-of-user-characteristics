@@ -1,0 +1,9 @@
+.age-distribution-chart__content {
+  width: 900px;
+  height: 200px;
+}
+
+.age-distribution-chart__content canvas {
+  width: 100% !important;
+  height: 100% !important;
+}

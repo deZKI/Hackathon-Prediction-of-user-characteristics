@@ -1,13 +1,11 @@
 import React from 'react';
 import './homepage.css';
-import ViewerGenderProbability from "../../ui/ViewerGenderProbability/ViewerGenderProbability";
-import ViewerAgeProbability from "../../ui/ViewerAgeProbability/ViewerAgeProbability";
-import AgeDistributionChart from "../../ui/AgeDistributionChart/AgeDistributionChart";
-import GigachatSwitcher from "../../ui/GigachatSwitcher/GigachatSwitcher";
-import GigachatResponse from "../../ui/GigachatResponse/GigachatResponse";
-import UsersDropdown from "../../ui/UsersDropdown/UsersDropdown";
+import ViewerGenderChart from "../../ui/ViewerGenderChart/ViewerGenderChart";
+import ViewerAgeChart from "../../ui/ViewerAgeChart/ViewerAgeChart";
+import UserDropdown from "../../ui/UserDropdown/UserDropdown";
 import ExportButton from "../../ui/ExportButton/ExportButton";
 import WatchHistory from "../../ui/WatchHistory/WatchHistory";
+import ViewerChart from "../../ui/ViewerChart/ViewerChart";
 
 export default function HomePage() {
   return (
@@ -17,8 +15,7 @@ export default function HomePage() {
           <h1 className="header__title">Аналитика по истории просмотров</h1>
           <div className="header__actions">
             <ExportButton/>
-            <UsersDropdown />
-            <GigachatSwitcher/>
+            <UserDropdown />
           </div>
         </div>
        <div className="header__divider"></div>
@@ -26,12 +23,11 @@ export default function HomePage() {
       <main className="main">
         <div className="main__container">
           <div className="main__statistics">
-            <AgeDistributionChart/>
+            <ViewerChart/>
             <div className="main__statistics__probability">
-              <ViewerAgeProbability />
-              <ViewerGenderProbability />
+              <ViewerAgeChart />
+              <ViewerGenderChart />
             </div>
-            <GigachatResponse />
           </div>
           <div className="main__history">
             <WatchHistory />

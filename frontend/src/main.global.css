@@ -22,18 +22,28 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Regular"), url("./assets/fonts/Roboto-Regular.woff2") format("woff2"), url("./assets/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-main:              #FFFFFF;
   --color-secondary-1:       #828282;
   --color-secondary-2:       #444444;
   --color-secondary-3:       #347BA3;
+  --color-secondary-4:       #116ACD;
   --color-chart-main:        #4BB2EC;
   --color-chart-secondary-1: #8FC0DB;
   --color-chart-secondary-2: #D8E9F3;
   --color-background:        #1C232B;
   --color-panel-background:  #29333D;
 
-  --zindex-dropdown:         1000;
+  --zindex-dropdown-modal:   1000;
+  --zindex-dropdown:         1010;
   --zindex-sticky:           1020;
   --zindex-fixed:            1030;
   --zindex-modal-backdrop:   1040;
@@ -69,6 +79,7 @@ button {
   padding: 0;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 input {

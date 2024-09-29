@@ -1,0 +1,35 @@
+.modal-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border: 1px solid var(--color-chart-main);
+  border-radius: 8px;
+  color: var(--color-main);
+  transition: color .1s ease;
+}
+
+.modal-button__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-button__icon svg path {
+  transition: fill .1s ease;
+}
+
+.modal-button__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.modal-button:hover {
+  color: var(--color-chart-main);
+}
+
+.modal-button:hover .modal-button__icon svg path {
+  fill: var(--color-chart-main);
+}

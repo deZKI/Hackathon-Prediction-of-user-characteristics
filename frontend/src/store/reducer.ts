@@ -1,7 +1,11 @@
 import {SET_GIGACHAT_IS_ACTIVE, SetGigachatIsActiveAction} from "./gigachatIsActive/gigachatIsActiveActions";
 import {gigachatIsActiveReducer, TGigachatIsActiveState} from "./gigachatIsActive/gigachatIsActiveReducer";
 import {SET_DROPDOWN_IS_OPEN, SetDropdownIsOpenAction} from "./dropdownIsOpen/dropdownIsOpenActions";
-import {TDropdownIsOpenState, dropdownIsOpenReducer} from "./dropdownIsOpen/dropdownIsOpenReducer";
+import {dropdownIsOpenReducer, TDropdownIsOpenState} from "./dropdownIsOpen/dropdownIsOpenReducer";
+import {SET_MODAL_IS_ACTIVE, SetModalIsActiveAction} from "./modalIsActive/modalIsActiveActions";
+import {modalIsActiveReducer, TModalIsActiveState} from "./modalIsActive/modalIsActiveReducer";
+import {SET_CHOSEN_USER, SetChosenUserAction} from "./chosenUser/chosenUserActions";
+import {chosenUserReducer, TChosenUserState} from "./chosenUser/chosenUserReducer";
 import {SET_CHART_TYPE, SetChartTypeAction} from "./chartType/chartTypeActions";
 import {chartTypeReducer, TChartTypeState} from "./chartType/chartTypeReducer";
 import {SET_RANGE_TYPE, SetRangeTypeAction} from "./rangeType/rangeTypeActions";
@@ -16,6 +20,8 @@ import {ERangeType} from "../types/customTypes/ERangeType";
 export type TInitialState = {
   gigachatIsActive: TGigachatIsActiveState;
   dropdownIsOpen: TDropdownIsOpenState;
+  modalIsActive: TModalIsActiveState;
+  chosenUser: TChosenUserState;
   chartType: TChartTypeState;
   rangeType: TRangeTypeState;
   rangeFrom: TRangeFromState;
@@ -28,6 +34,12 @@ export const initialState: TInitialState = {
   },
   dropdownIsOpen: {
     dropdownIsOpen: false,
+  },
+  modalIsActive: {
+    modalIsActive: false,
+  },
+  chosenUser: {
+    chosenUser: "id145679"
   },
   chartType: {
     chartType: EChartType.bar,
@@ -45,6 +57,8 @@ export const initialState: TInitialState = {
 
 type Actions = SetGigachatIsActiveAction
   | SetDropdownIsOpenAction
+  | SetModalIsActiveAction
+  | SetChosenUserAction
   | SetChartTypeAction
   | SetRangeTypeAction
   | SetRangeFromAction
@@ -61,6 +75,16 @@ export const rootReducer = (state = initialState, action: Actions): TInitialStat
       return {
         ...state,
         dropdownIsOpen: dropdownIsOpenReducer(state.dropdownIsOpen, action)
+      }
+    case SET_MODAL_IS_ACTIVE:
+      return {
+        ...state,
+        modalIsActive: modalIsActiveReducer(state.modalIsActive, action)
+      }
+    case SET_CHOSEN_USER:
+      return {
+        ...state,
+        chosenUser: chosenUserReducer(state.chosenUser, action)
       }
     case SET_CHART_TYPE:
       return {
