@@ -1,8 +1,9 @@
-from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+
+from fastapi import FastAPI, File, UploadFile
 
 from dotenv import load_dotenv
-from routers import advert
 
 load_dotenv()
 
@@ -21,4 +22,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(advert.router, prefix="/api/advert", tags=["Advert"])
+
+@app.post("/upload-file/")
+async def upload_file(file: UploadFile = File(...)):
+    # Чтение содержимого файла
+    contents = await file.read()
+    return JSONResponse(content={"error": 'e'}, status_code=400)
