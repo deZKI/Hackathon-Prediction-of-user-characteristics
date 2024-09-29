@@ -1,0 +1,29 @@
+.viewer-gender-chart__content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.viewer-gender-chart__statistics {
+  width: 406px;
+  height: 100px;
+}
+
+.viewer-age-chart__statistics canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.viewer-gender-chart__percentage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.viewer-gender-chart__number {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--color-secondary-1);
+}
